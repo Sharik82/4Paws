@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик - 4 Paws</title>
+    <link rel="stylesheet" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/css:/basket.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #fff;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Стилізація для блоку пошуку */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #28a745; /* Зелена рамка */
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+    font-size: 20px;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #000;
+}
+
+.search-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #28a745;
+            transform: translateY(-3px);
+        }
+
+        .nav a img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-left: 15px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .user-menu a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .user-menu a img {
+            width: 25px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/main.html"> <!-- Додайте тут посилання на головну сторінку -->
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/free-icon-paws-4225935 копія.png" alt="Лого">
+                <span>4 Paws</span>
+            </a>
+        </div>
+         <!-- Додаємо пошуковий елемент поряд з лого -->
+    <div class="search-container">
+        <input type="text" placeholder="Пошук...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+        <nav class="nav">
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dog-solid.svg" alt="Собакам">Собакам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/cat-solid.svg" alt="Котам">Котам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/Знімок екрана 2024-10-12 о 00.36.48.png" alt="Гризунам">Гризунам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/fish-solid.svg" alt="Рибам">Рибам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dove-solid.svg" alt="Птахам">Птахам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/staff-snake-solid.svg" alt="Рептиліям">Рептиліям</a>
+        </nav>
+        <div class="user-menu">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/index.htm"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/user-solid.svg" alt="Профіль">Профіль</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/basket.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/basket-shopping-solid.svg" alt="Кошик">Кошик</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/Contacts.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/phone-solid.svg" alt="Контакти">Контакти</a>
+        </div>
+    </header>
+    <section class="cart-container">
+        <h1>Ваш Кошик</h1>
+        <div class="cart-items">
+            <!-- Тут будуть відображені додані товари -->
+            <div class="cart-item">
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/katozal копія.jpeg" alt="Товар 1">
+                <div class="item-details">
+                    <h3>Катозал 10 ml</h3>
+                    <p>Ціна: 400 грн</p>
+                    <div class="item-actions">
+                        <input type="number" min="1" value="1" class="quantity-input">
+                        <button class="remove-btn">Видалити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <p>Загальна сума: <span class="total-price">400 грн</span></p>
+            <button class="checkout-btn">Оформити замовлення</button>
+        </div>
+    </section>
+   <!-- Додайте цей код до вашого існуючого HTML -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Оформлення замовлення</h2>
+        <form id="checkoutForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Адреса доставки:</label>
+            <input type="text" id="address" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="payment">Спосіб оплати:</label>
+            <select id="payment" required>
+                <option value="">Оберіть спосіб оплати</option>
+                <option value="card">Карткою</option>
+                <option value="cash">Готівкою</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="savedCards" style="display:none;">
+                <label for="savedCard">Виберіть збережену картку:</label>
+                <select id="savedCard">
+                    <option value="card1">Картка 1</option>
+                    <option value="card2">Картка 2</option>
+                </select>
+                <button type="button" id="addNewCard">Додати нову картку</button>
+            </div>
+
+            <div id="newCard" style="display:none;">
+                <label for="cardNumber">Номер картки:</label>
+                <input type="text" id="cardNumber" required>
+
+                <label for="expiryDate">Термін дії:</label>
+                <input type="text" id="expiryDate" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Підтвердити замовлення</button>
+        </form>
+        <div id="successMessage" style="display:none;">
+            <h3>Замовлення успішне! <span class="check-icon">✔️</span></h3>
+            <p>Гарного дня!</p>
+        </div>
+    </div>
+</div>
+
+<script src="/Users/denisshargorodsky/Desktop/registration window /basket.js"></script>
+</body>
+</html>

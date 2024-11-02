@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоомагазин - Шапка</title>
+    <link rel="stylesheet" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/css:/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #fff;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Стилізація для блоку пошуку */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #28a745; /* Зелена рамка */
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+    font-size: 20px;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #000;
+}
+
+.search-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #28a745;
+            transform: translateY(-3px);
+        }
+
+        .nav a img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-left: 15px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .user-menu a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .user-menu a img {
+            width: 25px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/main.html"> <!-- Додайте тут посилання на головну сторінку -->
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg" alt="Лого">
+                <span>4 Paws</span>
+            </a>
+        </div>
+         <!-- Додаємо пошуковий елемент поряд з лого -->
+    <div class="search-container">
+        <input type="text" placeholder="Пошук...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+        <nav class="nav">
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dog-solid.svg" alt="Собакам">Собакам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/cat-solid.svg" alt="Котам">Котам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/Знімок екрана 2024-10-12 о 00.36.48.png" alt="Гризунам">Гризунам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/fish-solid.svg" alt="Рибам">Рибам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dove-solid.svg" alt="Птахам">Птахам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/staff-snake-solid.svg" alt="Рептиліям">Рептиліям</a>
+        </nav>
+        <div class="user-menu">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/index.htm"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/user-solid.svg" alt="Профіль">Профіль</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/basket.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/basket-shopping-solid.svg" alt="Кошик">Кошик</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/Contacts.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/phone-solid.svg" alt="Контакти">Контакти</a>
+        </div>
+    </header>

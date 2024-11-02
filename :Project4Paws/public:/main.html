@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоомагазин - Шапка</title>
+    <link rel="stylesheet" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/css:/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #fff;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Стилізація для блоку пошуку */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #28a745; /* Зелена рамка */
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+    font-size: 20px;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #000;
+}
+
+.search-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #28a745;
+            transform: translateY(-3px);
+        }
+
+        .nav a img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-left: 15px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .user-menu a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .user-menu a img {
+            width: 25px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/main.html"> <!-- Додайте тут посилання на головну сторінку -->
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg" alt="Лого">
+                <span>4 Paws</span>
+            </a>
+        </div>
+         <!-- Додаємо пошуковий елемент поряд з лого -->
+    <div class="search-container">
+        <input type="text" placeholder="Пошук...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+        <nav class="nav">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/dog.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dog-solid.svg" alt="Собакам">Собакам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/cat-solid.svg" alt="Котам">Котам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/Знімок екрана 2024-10-12 о 00.36.48.png" alt="Гризунам">Гризунам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/fish-solid.svg" alt="Рибам">Рибам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/dove-solid.svg" alt="Птахам">Птахам</a>
+            <a href="#"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/staff-snake-solid.svg" alt="Рептиліям">Рептиліям</a>
+        </nav>
+        <div class="user-menu">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/index.htm"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/user-solid.svg" alt="Профіль">Профіль</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/basket.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/basket-shopping-solid.svg" alt="Кошик">Кошик</a>
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/Contacts.html"><img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/phone-solid.svg" alt="Контакти">Контакти</a>
+        </div>
+    </header>
+    <div class="slideshow-container"></div>
+        <div class="mySlides fade">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/actionn03.webp" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/akciooonnn01.webp" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/akction 02.webp" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/akction 02.webp" style="width:100%">
+        </div>
+
+    </div>
+    <div class="product-section"></div>
+        <h2>Акційні пропозиції</h2>
+        <div class="products-wrapper">
+            <button class="carousel-btn prev-btn">⟨</button>
+            <div class="products-carousel">
+                <div class="product-card" data-name="Катозал внутрівенно 10ml" data-link="/path/to/product1.html">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/katozal копія.jpeg" alt="Product 1">
+                    <p>Катозал внутрівенно 10ml</p>
+                    <p>Ціна: 100 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" id="roduct2">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/61791417100569.webp" alt="Product 2">
+                    <p>Ласощі для собак Trixie Braids 85 г 12 см/1 шт - яловичина</p>
+                    <p>Ціна: 150 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/doshchovik-dlya-sobak-pet-fashion-tina-xl-12387045572216.webp" alt="Product 3" id="Product 3">
+                    <p>Дощовик для собак Pet Fashion Tina XL</p>
+                    <p>Ціна: 1449.00 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/11865687650519.webp" alt="Product 4">
+                    <p>Лежак для котів та собак Pet Fashion Jack 80х60х16 см</p>
+                    <p></p>
+                    <p>1 325.00 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/miska-metallicheskaja-na-rezinovoy-kromke-swastik-industries-840-ml-28778716679422.webp" alt="Product 5">
+                    <p>Миска металева на гумовій кромці Swastik Industries 840 мл</p>
+                    <p>225.25 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/sukhiy-korm-dlya-sobak-malikh-i-serednikh-porid-brit-care-dog-grain-free-adult-bezzernoviy-losos-1-kg-99923165652671.webp" alt="Product 6">
+                    <p>Миска металева на гумовій кромці Swastik Industries 840 мл</p>
+                    <p>Ціна: 350 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next-btn">⟩</button>
+        </div>
+
+        <h2>Популярні товари</h2>
+        <div class="products-wrapper">
+            <button class="carousel-btn prev-btn">⟨</button>
+            <div class="products-carousel">
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/sukhiy-korm-dlya-vibaglivikh-kotiv-brit-care-cat-gf-sensitive-hdigestion-delicate-taste-400-g-indichka-i-losos-47916546105036.webp" alt="Product 7">
+                    <p>Product 7</p>
+                    <p>Ціна: 120 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/sukhiy-korm-dlya-doroslikh-kotiv-z-efektom-vivedennya-vovni-optimeal-10-kg-kachka-42908192267670.webp" alt="Product 8">
+                    <p>Сухий корм для котів Brit Care Cat Grain Free Sterilized Sensitive 400 г - кролик</p>
+                    <p>Ціна: 236.00 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/sukhiy-korm-dlya-sterilizovanikh-kotiv-z-chutlivim-travlennyam-brit-care-cat-gf-sterilized-sensitive-400-g-krolik-49346025459910.webp" alt="Product 9">
+                    <p>Product 9</p>
+                    <p>Ціна: 240 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/sukhiy-korm-dlya-sobak-malikh-i-serednikh-porid-brit-care-dog-grain-free-adult-bezzernoviy-losos-1-kg-99923165652671.webp" alt="Product 10">
+                    <p>Product 10</p>
+                    <p>Ціна: 290 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="product11.jpg" alt="Product 11">
+                    <p>Product 11</p>
+                    <p>Ціна: 360 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="product12.jpg" alt="Product 12">
+                    <p>Product 12</p>
+                    <p>Ціна: 400 грн</p>
+                    <div class="button-group">
+                        <button class="buy-btn">Купити</button>
+                        <button class="details-btn">Детальніше</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn">⟩</button>
+        </div>
+    </div>
+
+    <div class="brand-section">
+        <div class="brand-row">
+            <div class="brand-item">
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/brand/brit-21095748377929.webp" alt="Клуб 4 Лапи">
+            </div>
+            <div class="brand-item">
+                <img src="/Users/denisshargorodsky/Desktop/registration window /Phot/byerr.webp" alt="Royal Canin">
+            </div>
+            <div class="brand-item">
+                <img src="/Users/denisshargorodsky/Desktop/registration window /Phot/optimeal-beauty-15189057230652.webp" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image5" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image6" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image7" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image8" alt="Another Brand">
+            </div>
+        </div>
+    
+        <div class="hidden-brands" style="display: none;">
+            <div class="brand-item">
+                <img src="/Users/denisshargorodsky/Desktop/registration window /Phot/optimeal-beauty-15189057230652.webp" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image10" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image11" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image12" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image13" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image14" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image15" alt="Another Brand">
+            </div>
+            <div class="brand-item">
+                <img src="path_to_image16" alt="Another Brand">
+            </div>
+        </div>
+    
+        <button id="toggle-brands-btn" class="toggle-btn">Розгорнути</button>
+    </div>
+    <div class="nutrition-calculator">
+        <h2>Калькулятор добової норми харчування</h2>
+        <form id="nutritionForm">
+            <label for="weight">Вага тварини (кг):</label>
+            <input type="number" id="weight" required>
+            
+            <label for="activity">Рівень активності:</label>
+            <select id="activity" required>
+                <option value="low">Низький</option>
+                <option value="medium">Середній</option>
+                <option value="high">Високий</option>
+            </select>
+    
+            <button type="submit">Розрахувати</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <!-- HTML для блоку з відгуками -->
+<section class="reviews-section">
+    <h2>Відгуки наших клієнтів та їх улюбленців</h2>
+    <div class="reviews-carousel">
+        <div class="review-item">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/Call/customer-service.png" alt="Customer Photo">
+            <p>“Чудовий сервіс, мій песик у захваті!” – Ольга та її пес Чарлі</p>
+        </div>
+        <div class="review-item">
+            <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/Call/call-center.png" alt="Customer Photo">
+            <p>“Чудовий сервіс, мій песик у захваті!” – Ольга та її пес Чарлі</p>
+        </div>
+        <div class="review-item">
+            <img src="customer1.jpg" alt="Customer Photo">
+            <p>“Чудовий сервіс, мій песик у захваті!” – Ольга та її пес Чарлі</p>
+        </div>
+        <div class="review-item">
+            <img src="customer1.jpg" alt="Customer Photo">
+            <p>“Чудовий сервіс, мій песик у захваті!” – Ольга та її пес Чарлі</p>
+        </div>
+        <div class="review-item">
+            <img src="customer1.jpg" alt="Customer Photo">
+            <p>“Чудовий сервіс, мій песик у захваті!” – Ольга та її пес Чарлі</p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <h3><i class="fas fa-phone-alt"></i> Контактна інформація</h3>
+            <p>Телефон: +380 96 175 13 52</p>
+            <p>Електронна пошта: info@4paws.com</p>
+        </div>
+        <div class="social-media">
+            <h3><i class="fab fa-facebook"></i> Ми в соцмережах</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    
+<script src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/js:/main.js" defer></script>
+
+</body>
+</html>
