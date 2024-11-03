@@ -3,392 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Особистий Кабінет</title>
-    <link rel="stylesheet" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/css:/account.css">
+    <title>Зоомагазин - Шапка</title>
+    <link rel="stylesheet" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/css:/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        *, *::before, *::after {
-            box-sizing: inherit;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        .greeting {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #4CAF50;
-        }
-
-        .section {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between; /* Додаємо вирівнювання по краях */
-        }
-
-        .section-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            flex-grow: 1;
-        }
-
-        .interactive-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            margin-top: 10px; /* Додаємо відступ зверху */
-            max-width: 150px; /* Задаємо максимальну ширину для кнопок */
-        }
-
-        .interactive-btn:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
-
-        .icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            color: #4CAF50;
-        }
-
-        .order-history, .address, .wallet, .payment-methods {
+            font-family: Arial, sans-serif;
             background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
         }
 
-        .order-history:hover, .address:hover, .wallet:hover, .payment-methods:hover {
-            background-color: #e0ffe0;
-        }
-
-        .order-item {
+        .header {
+            background-color: #fff;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
 
-        .order-item img {
-            width: 60px;
-            height: 60px;
-            border-radius: 5px;
+        .header:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .order-details {
-            flex-grow: 1;
-            margin-left: 10px;
+        .logo {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
         }
 
-        .order-price {
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #28a745;
+            transition: color 0.3s ease;
         }
 
-        .input-container {
-            position: relative;
-            margin-bottom: 15px;
-            width: 100%;
+        .logo:hover {
+            transform: scale(1.1);
         }
 
-        .input-container input {
-            width: 100%;
-            padding: 12px;
-            padding-left: 40px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            transition: border-color 0.3s ease;
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 2px solid #28a745;
+            border-radius: 20px;
+            padding: 5px 10px;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease;
         }
 
-        .input-container input:focus {
-            border-color: #4CAF50;
+        .search-container input {
+            border: none;
             outline: none;
+            padding: 8px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #333;
+            width: 180px;
+            transition: width 0.4s ease;
         }
 
-        .input-container i {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #4CAF50;
+        .search-container input:focus {
+            width: 220px;
         }
 
+        .search-container button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #28a745;
+            font-size: 20px;
+            margin-left: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            color: #000;
+        }
+
+        .search-container:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .nav a:hover {
+            color: #28a745;
+            background-color: rgba(40, 167, 69, 0.1);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .nav a img {
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-left: 15px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .user-menu a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .user-menu a img {
+            width: 25px;
+            margin-right: 5px;
+        }
+
+        /* Модальне вікно */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
-            padding-top: 100px;
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.4);
-            transition: opacity 0.5s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease-in-out;
         }
 
         .modal-content {
-            background-color: white;
-            margin: auto;
+            background-color: #fff;
+            margin: 10% auto;
             padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 15px;
-            animation: slideDown 0.5s ease;
-            overflow: hidden; /* Обмеження переповнення */
-        }
-
-        @keyframes slideDown {
-            from {transform: translateY(-50px);}
-            to {transform: translateY(0);}
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
         }
 
         .close {
-            color: red;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover, .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .address-option {
-            margin: 5px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            position: relative; /* Для абсолютного позиціонування дочірніх елементів */
-        }
-
-        .address-dropdown {
-            display: none; /* Сховане меню */
+            color: #aaa;
+            font-size: 24px;
             position: absolute;
-            left: 0;
-            top: 100%; /* Розміщення під основною адресою */
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .input-container i {
+            color: #28a745;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .input-container input {
+            border: none;
+            outline: none;
             width: 100%;
-            z-index: 10;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
-            max-height: 0;
-            overflow: hidden; /* Сховування переповненого контенту */
-            opacity: 0;
+            padding: 8px 0;
+            font-size: 16px;
         }
 
-        .address-option:hover .address-dropdown {
-            display: block; /* Відображення при наведенні */
-            max-height: 200px; /* Максимальна висота для анімації */
-            opacity: 1; /* Показує меню */
+        .interactive-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
         }
 
-        .address-item {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+        .interactive-btn:hover {
+            background-color: #218838;
         }
 
-        .address-item:hover {
-            background-color: #f0f0f0;
-        }
-
-        .address-item:last-child {
-            border-bottom: none; /* Видаляє нижню межу у останнього елемента */
+        /* Анімація для модального вікна */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <a href="/Users/denisshargorodsky/Desktop/registration window /main.html"> <!-- Додайте тут посилання на головну сторінку -->
-                <img src="/Users/denisshargorodsky/Desktop/registration window /Phot/free-icon-paws-4225935 копія.png" alt="Лого">
+            <a href="/Users/denisshargorodsky/Desktop/:Project4Paws/public:/main.html">
+                <img src="/Users/denisshargorodsky/Desktop/:Project4Paws/src:/images:/testlogo.jpg" alt="Лого">
                 <span>4 Paws</span>
             </a>
         </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Пошук...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
         <nav class="nav">
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/dog-solid.svg" alt="Собакам">Собакам</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/cat-solid.svg" alt="Котам">Котам</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/Знімок екрана 2024-10-12 о 00.36.48.png" alt="Гризунам">Гризунам</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/fish-solid.svg" alt="Рибам">Рибам</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/dove-solid.svg" alt="Птахам">Птахам</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/staff-snake-solid.svg" alt="Рептиліям">Рептиліям</a>
+            <a href="#"><img src="dog-icon.svg" alt="Собакам">Собакам</a>
+            <a href="#"><img src="cat-icon.svg" alt="Котам">Котам</a>
+            <a href="#"><img src="rodent-icon.svg" alt="Гризунам">Гризунам</a>
+            <a href="#"><img src="fish-icon.svg" alt="Рибам">Рибам</a>
+            <a href="#"><img src="bird-icon.svg" alt="Птахам">Птахам</a>
+            <a href="#"><img src="reptile-icon.svg" alt="Рептиліям">Рептиліям</a>
         </nav>
+
         <div class="user-menu">
-            <a href="/Users/denisshargorodsky/Desktop/registration window /index.htm"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/user-solid.svg" alt="Профіль">Профіль</a>
-            <a href="/Users/denisshargorodsky/Desktop/registration window /basket.html"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/basket-shopping-solid.svg" alt="Кошик">Кошик</a>
-            <a href="#"><img src="/Users/denisshargorodsky/Desktop/registration window /Phot/envelope-solid.svg" alt="Контакти">Контакти</a>
+            <a href="#"><img src="user-icon.svg" alt="Профіль">Профіль</a>
+            <a href="#"><img src="cart-icon.svg" alt="Кошик">Кошик</a>
+            <a href="#"><img src="contact-icon.svg" alt="Контакти">Контакти</a>
         </div>
     </header>
-    <div class="container">
-        <div class="greeting" id="greeting">Доброго дня, Денис!</div>
 
-        <!-- Історія Замовлень -->
-        <div class="section order-history">
-            <i class="fas fa-history icon"></i>
-            <div class="section-title">Історія Замовлень</div>
-            <div class="order-item">
-                <img src="product1.jpg" alt="Product 1">
-                <div class="order-details">
-                    <p>Замовлення №1</p>
-                    <p>Дата: 2024-10-10</p>
-                    <p>Час: 14:30</p>
-                </div>
-                <p class="order-price">€30.00</p>
-            </div>
-            <div class="order-item">
-                <img src="product2.jpg" alt="Product 2">
-                <div class="order-details">
-                    <p>Замовлення №2</p>
-                    <p>Дата: 2024-09-25</p>
-                    <p>Час: 10:15</p>
-                </div>
-                <p class="order-price">€45.00</p>
-            </div>
-        </div>
-
-        <!-- Адреса Доставки -->
-        <div class="section address">
-            <i class="fas fa-map-marker-alt icon"></i>
-            <div class="section-title">Адреса Доставки</div>
-            <div class="address-option">
-                <p>Вулиця Лесі Українки, 10, Київ</p>
-                <div class="address-dropdown">
-                    <div class="address-item">Вулиця Шевченка, 15, Львів</div>
-                    <div class="address-item">Вулиця Незалежності, 20, Одеса</div>
-                    <div class="address-item">Вулиця Гагаріна, 5, Харків</div>
-                </div>
-            </div>
-            <button class="interactive-btn" id="addAddressBtn">Додати адресу</button>
-        </div>
-
-        <!-- Баланс Гаманця -->
-        <div class="section wallet">
-            <i class="fas fa-wallet icon"></i>
-            <div class="section-title">Баланс Гаманця</div>
-            <p>€100.00</p>
-        </div>
-
-        <!-- Способи Оплати -->
-        <div class="section payment-methods">
-            <i class="fas fa-credit-card icon"></i>
-            <div class="section-title">Способи Оплати</div>
-            <button class="interactive-btn" id="addPaymentBtn">Додати Спосіб Оплати</button>
-        </div>
-    </div>
-
-    <!-- Модальне вікно для адреси -->
-    <div id="addressModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeAddress">&times;</span>
-            <h2>Додати Адресу</h2>
-            <div class="input-container">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" id="addressInput" placeholder="Введіть адресу" required>
-            </div>
-            <button class="interactive-btn" id="openMapsBtn">Вибрати на Google Maps</button>
-            <button class="interactive-btn">Зберегти</button>
-        </div>
-    </div>
-
-    <!-- Модальне вікно для способу оплати -->
-    <div id="paymentModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closePayment">&times;</span>
-            <h2>Додати Спосіб Оплати</h2>
-            <div class="input-container">
-                <i class="fas fa-credit-card"></i>
-                <input type="text" placeholder="Номер картки (16 цифр)" maxlength="19" pattern="\d{16}" required>
-            </div>
-            <div class="input-container">
-                <i class="fas fa-calendar-alt"></i>
-                <input type="text" placeholder="Термін дії (MM/YY)" maxlength="5" pattern="\d{2}/\d{2}" required>
-            </div>
-            <div class="input-container">
-                <i class="fas fa-lock"></i>
-                <input type="text" placeholder="CVV (3 цифри)" maxlength="3" pattern="\d{3}" required>
-            </div>
-            <button class="interactive-btn">Додати</button>
-        </div>
-    </div>
-
+    <!-- JavaScript для модального вікна -->
     <script>
-        // Показати/сховати модальне вікно для адреси
-        const addressModal = document.getElementById("addressModal");
-        const addAddressBtn = document.getElementById("addAddressBtn");
-        const closeAddress = document.getElementById("closeAddress");
-        const openMapsBtn = document.getElementById("openMapsBtn");
+        const modal = document.querySelector('.modal');
+        const closeModal = document.querySelector('.close');
 
-        addAddressBtn.onclick = () => {
-            addressModal.style.display = "block";
-        };
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-        closeAddress.onclick = () => {
-            addressModal.style.display = "none";
-        };
-
-        window.onclick = (event) => {
-            if (event.target === addressModal) {
-                addressModal.style.display = "none";
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
             }
-        };
-
-        // Показати/сховати модальне вікно для способу оплати
-        const paymentModal = document.getElementById("paymentModal");
-        const addPaymentBtn = document.getElementById("addPaymentBtn");
-        const closePayment = document.getElementById("closePayment");
-
-        addPaymentBtn.onclick = () => {
-            paymentModal.style.display = "block";
-        };
-
-        closePayment.onclick = () => {
-            paymentModal.style.display = "none";
-        };
-
-        window.onclick = (event) => {
-            if (event.target === paymentModal) {
-                paymentModal.style.display = "none";
-            }
-        };
-
-        // Функція для переходу на Google Maps
-        openMapsBtn.onclick = () => {
-            const address = document.getElementById("addressInput").value || "Київ"; // Приклад адреси
-            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-            window.open(url, '_blank');
-        };
+        });
     </script>
 </body>
 </html>

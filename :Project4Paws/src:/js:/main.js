@@ -36,24 +36,6 @@ nextButtons.forEach(button => {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.getElementById('toggle-brands-btn').addEventListener('click', function() {
     const hiddenBrands = document.querySelector('.hidden-brands');
     const toggleButton = document.getElementById('toggle-brands-btn');
